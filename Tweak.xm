@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 }
 @end
 
-#define kBundlePath @"/Library/MobileSubstrate/DynamicLibraries/FLEXInjectedBundle.bundle"
+#define kBundlePath @"/var/jb/Library/MobileSubstrate/DynamicLibraries/FLEXInjectedBundle.bundle"
 
 @implementation FLEXInjected
 
@@ -37,7 +37,7 @@ __attribute__((visibility("hidden")))
 
 -(void)inject {
 	
-	NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.daapps.FLEXInjected.plist"];
+	NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:@"/var/jb/Library/PreferencesLoader/Preferences/com.daapps.FLEXInjected.plist"]; 
 	id setting = [settings objectForKey:[NSString stringWithFormat:@"FLEXInjectedEnabled-%@", [NSBundle mainBundle].bundleIdentifier]];
 	if (setting && [setting boolValue]) {
 
