@@ -1,13 +1,13 @@
 GO_EASY_ON_ME = 1
-ARCHS = armv7 armv7s arm64
+ARCHS = arm64 arm64e
 include theos/makefiles/common.mk
 
 ADDITIONAL_CFLAGS = -fobjc-arc -Os -Qunused-arguments -Itemp -Wno-c++11-extensions -Xclang -fobjc-runtime-has-weak
 
-export SDKVERSION=9.3
-SDKVERSION = 9.3
-INCLUDE_SDKVERSION = 9.3
-TARGET_IPHONEOS_DEPLOYMENT_VERSION = 9.3
+//export SDKVERSION=9.3
+SDKVERSION = 13.7
+INCLUDE_SDKVERSION = 13.7
+TARGET_IPHONEOS_DEPLOYMENT_VERSION = 13.0
 TARGET_CC = xcrun -sdk iphoneos clang
 TARGET_CXX = xcrun -sdk iphoneos clang++
 TARGET_LD = xcrun -sdk iphoneos clang++
@@ -23,7 +23,7 @@ FLEXInjected_FRAMEWORKS = UIKit CoreGraphics QuartzCore ImageIO
 FLEXInjected_LDFLAGS = -lz -lsqlite3
 
 BUNDLE_NAME = FLEXInjectedBundle
-FLEXInjectedBundle_INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries
+FLEXInjectedBundle_INSTALL_PATH = /var/jb/Library/MobileSubstrate/DynamicLibraries
 include $(THEOS)/makefiles/bundle.mk
 
 include $(THEOS_MAKE_PATH)/tweak.mk
