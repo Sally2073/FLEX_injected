@@ -4,7 +4,7 @@ include theos/makefiles/common.mk
 
 ADDITIONAL_CFLAGS = -fobjc-arc -Os -Qunused-arguments -Itemp -Wno-c++11-extensions -Xclang -fobjc-runtime-has-weak
 
-//export SDKVERSION=9.3
+# export SDKVERSION=9.3
 SDKVERSION = 13.7
 INCLUDE_SDKVERSION = 13.7
 TARGET_IPHONEOS_DEPLOYMENT_VERSION = 13.0
